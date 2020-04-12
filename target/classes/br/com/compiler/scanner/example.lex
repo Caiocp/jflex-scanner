@@ -3,8 +3,8 @@ package br.com.compiler.scanner;
 %public
 %class LexicalAnalyzerExample
 %{
-private void print_value(String lexema, String tipo) {
- System.out.println(lexema + " - " + tipo);
+private void print_value(String lexema, String tipo, String valor) {
+ System.out.println(lexema + " | " + tipo + " | " + valor);
 }
 %}
 %int
@@ -24,12 +24,12 @@ PESQ = [)]
 %%
 
 {BRANCO} {/*Ignore*/}
-{NUMERO} {print_value(yytext(), "Número");}
-{SOMA} {print_value(yytext(), "Soma");}
-{SUB} {print_value(yytext(), "Subtração");}
-{EXP} {print_value(yytext(), "Exponenciação");}
-{MULT} {print_value(yytext(), "Multiplicação");}
-{DIV} {print_value(yytext(), "Divisão");}
-{PDIR} {print_value(yytext(), "Pontuação");}
-{PESQ} {print_value(yytext(), "Pontuação");}
+{NUMERO} {print_value(yytext(), "Número", yytext());}
+{SOMA} {print_value(yytext(), "Soma", yytext());}
+{SUB} {print_value(yytext(), "Subtração", yytext());}
+{EXP} {print_value(yytext(), "Exponenciação", yytext());}
+{MULT} {print_value(yytext(), "Multiplicação", yytext());}
+{DIV} {print_value(yytext(), "Divisão", yytext());}
+{PDIR} {print_value(yytext(), "Pontuação", yytext());}
+{PESQ} {print_value(yytext(), "Pontuação", yytext());}
 . { throw new RuntimeException("Lexemas inválidos " + yytext()); }
