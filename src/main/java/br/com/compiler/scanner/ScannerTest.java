@@ -5,7 +5,7 @@ import java.io.StringReader;
 
 public class ScannerTest {
 	public static void main(String[] args) throws IOException {
-		String expr = "1 + 2/b";
+		String expr = "1 + 1"; //coloque a expressão aqui
 		LexicalAnalyzerExample lexical = new LexicalAnalyzerExample(new StringReader(expr));
 		lexical.yylex();
 	}
