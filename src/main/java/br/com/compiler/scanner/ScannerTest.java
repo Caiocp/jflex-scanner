@@ -5,7 +5,7 @@ import java.io.StringReader;
 
 public class ScannerTest {
 	public static void main(String[] args) throws IOException {
-		String expr = "-5--7";
+		String expr = "1 + 2/b";
 		LexicalAnalyzerExample lexical = new LexicalAnalyzerExample(new StringReader(expr));
 		lexical.yylex();
 	}
@@ -19,4 +19,5 @@ public class ScannerTest {
 ---> -(8+12)**1*3/-4
 ---> a2+(3-5)
 ---> 1+2/b
+[^\d\s()/*+-]\+|\-[\d]+
 */

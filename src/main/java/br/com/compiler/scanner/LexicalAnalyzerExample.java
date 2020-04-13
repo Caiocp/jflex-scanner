@@ -32,20 +32,20 @@ public class LexicalAnalyzerExample {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\1\1\1\1\1\10\1\10\1\1\22\0\1\1\7\0\1\7"+
-    "\1\7\1\4\1\2\1\0\1\3\1\0\1\5\12\6\102\0\1\1"+
-    "\10\0\1\10\u05da\0\12\6\206\0\12\6\306\0\12\6\u019c\0\12\6"+
-    "\166\0\12\6\166\0\12\6\166\0\12\6\166\0\12\6\166\0\12\6"+
-    "\166\0\12\6\166\0\12\6\166\0\12\6\166\0\12\6\140\0\12\6"+
-    "\166\0\12\6\106\0\12\6\u0116\0\12\6\106\0\12\6\u0746\0\12\6"+
-    "\46\0\12\6\u012c\0\12\6\200\0\12\6\246\0\12\6\6\0\12\6"+
-    "\266\0\12\6\126\0\12\6\206\0\12\6\6\0\12\6\u03ce\0\1\10"+
-    "\1\10\u85f6\0\12\6\u02a6\0\12\6\46\0\12\6\306\0\12\6\26\0"+
-    "\12\6\126\0\12\6\u0196\0\12\6\u5316\0\12\6\u0586\0\12\6\u0bbc\0"+
-    "\12\6\200\0\12\6\74\0\12\6\220\0\12\6\u0116\0\12\6\u0156\0"+
-    "\12\6\166\0\12\6\u0176\0\12\6\146\0\12\6\146\0\12\6\u01a6\0"+
-    "\12\6\u0366\0\12\6\u4e06\0\12\6\346\0\12\6\u6c74\0\62\6\u1150\0"+
-    "\12\6\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\u16b5\0";
+    "\11\0\1\10\1\10\1\11\1\11\1\10\22\0\1\10\7\0\1\6"+
+    "\1\7\1\4\1\3\1\0\1\2\1\0\1\5\12\1\102\0\1\10"+
+    "\10\0\1\11\u05da\0\12\1\206\0\12\1\306\0\12\1\u019c\0\12\1"+
+    "\166\0\12\1\166\0\12\1\166\0\12\1\166\0\12\1\166\0\12\1"+
+    "\166\0\12\1\166\0\12\1\166\0\12\1\166\0\12\1\140\0\12\1"+
+    "\166\0\12\1\106\0\12\1\u0116\0\12\1\106\0\12\1\u0746\0\12\1"+
+    "\46\0\12\1\u012c\0\12\1\200\0\12\1\246\0\12\1\6\0\12\1"+
+    "\266\0\12\1\126\0\12\1\206\0\12\1\6\0\12\1\u03ce\0\1\11"+
+    "\1\11\u85f6\0\12\1\u02a6\0\12\1\46\0\12\1\306\0\12\1\26\0"+
+    "\12\1\126\0\12\1\u0196\0\12\1\u5316\0\12\1\u0586\0\12\1\u0bbc\0"+
+    "\12\1\200\0\12\1\74\0\12\1\220\0\12\1\u0116\0\12\1\u0156\0"+
+    "\12\1\166\0\12\1\u0176\0\12\1\146\0\12\1\146\0\12\1\u01a6\0"+
+    "\12\1\u0366\0\12\1\u4e06\0\12\1\346\0\12\1\u6c74\0\62\1\u1150\0"+
+    "\12\1\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\u16b5\0";
 
   /** 
    * Translates characters to character classes
@@ -59,10 +59,10 @@ public class LexicalAnalyzerExample {
 
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7"+
-    "\1\10\1\11";
+    "\1\10\1\11\1\12";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[10];
+    int [] result = new int[11];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -87,11 +87,11 @@ public class LexicalAnalyzerExample {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\11\0\11\0\11\0\11\0\22\0\11\0\33"+
-    "\0\11\0\11";
+    "\0\0\0\12\0\24\0\24\0\24\0\36\0\12\0\12"+
+    "\0\12\0\12\0\12";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[10];
+    int [] result = new int[11];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -115,10 +115,10 @@ public class LexicalAnalyzerExample {
 
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11"+
-    "\16\0\1\12\12\0\1\10\2\0";
+    "\1\12\14\0\1\3\14\0\1\13\5\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[36];
+    int [] result = new int[40];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -156,10 +156,10 @@ public class LexicalAnalyzerExample {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\4\11\1\1\1\11\1\1\2\11";
+    "\1\0\1\11\4\1\5\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[10];
+    int [] result = new int[11];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -236,7 +236,7 @@ public class LexicalAnalyzerExample {
 
   /* user code: */
 private void print_value(String lexema, String tipo, String valor) {
- System.out.println(lexema + " | " + tipo + " | " + valor);
+ System.out.println(lexema + "\t" + " | " + tipo + "\t" + " | " + valor);
 }
 
 
@@ -614,47 +614,52 @@ private void print_value(String lexema, String tipo, String valor) {
             { throw new RuntimeException("Lexemas inválidos " + yytext());
             } 
             // fall through
-          case 10: break;
-          case 2: 
-            { /*Ignore*/
-            } 
-            // fall through
           case 11: break;
-          case 3: 
-            { print_value(yytext(), "Soma", yytext());
-            } 
-            // fall through
-          case 12: break;
-          case 4: 
-            { print_value(yytext(), "Subtração", yytext());
-            } 
-            // fall through
-          case 13: break;
-          case 5: 
-            { print_value(yytext(), "Multiplicação", yytext());
-            } 
-            // fall through
-          case 14: break;
-          case 6: 
-            { print_value(yytext(), "Divisão", yytext());
-            } 
-            // fall through
-          case 15: break;
-          case 7: 
+          case 2: 
             { print_value(yytext(), "Número", yytext());
             } 
             // fall through
+          case 12: break;
+          case 3: 
+            { print_value(yytext(), "Operador", "Subtração");
+            } 
+            // fall through
+          case 13: break;
+          case 4: 
+            { print_value(yytext(), "Operador", "Soma");
+            } 
+            // fall through
+          case 14: break;
+          case 5: 
+            { print_value(yytext(), "Operador", "Multiplicação");
+            } 
+            // fall through
+          case 15: break;
+          case 6: 
+            { print_value(yytext(), "Operador", "Divisão");
+            } 
+            // fall through
           case 16: break;
-          case 8: 
-            { print_value(yytext(), "Pontuação", yytext());
+          case 7: 
+            { print_value(yytext(), "Pontuação", "ParenDir");
             } 
             // fall through
           case 17: break;
-          case 9: 
-            { print_value(yytext(), "Exponenciação", yytext());
+          case 8: 
+            { print_value(yytext(), "Pontuação", "ParenEsq");
             } 
             // fall through
           case 18: break;
+          case 9: 
+            { /*Ignore*/
+            } 
+            // fall through
+          case 19: break;
+          case 10: 
+            { print_value(yytext(), "Operador", "Exponenciação");
+            } 
+            // fall through
+          case 20: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

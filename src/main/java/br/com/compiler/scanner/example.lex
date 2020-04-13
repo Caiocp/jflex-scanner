@@ -4,32 +4,34 @@ package br.com.compiler.scanner;
 %class LexicalAnalyzerExample
 %{
 private void print_value(String lexema, String tipo, String valor) {
- System.out.println(lexema + " | " + tipo + " | " + valor);
+ System.out.println(lexema + "\t" + " | " + tipo + "\t" + " | " + valor);
 }
 %}
 %int
 %line
 %column
 
-BRANCO = [\n| |\t|\r]
+NUMERO = [\d]+
+SINALNUMERO = [-+]{1}\d+
 SOMA = [+]
 SUB = [-]
 MULT = [*]
 DIV = [/]
 EXP = [*]{2}
-NUMERO = [\d]+
 PDIR = [(]
 PESQ = [)]
+ESPACO = [\n| |\t|\r]
 
 %%
 
-{BRANCO} {/*Ignore*/}
 {NUMERO} {print_value(yytext(), "Número", yytext());}
-{SOMA} {print_value(yytext(), "Soma", yytext());}
-{SUB} {print_value(yytext(), "Subtração", yytext());}
-{EXP} {print_value(yytext(), "Exponenciação", yytext());}
-{MULT} {print_value(yytext(), "Multiplicação", yytext());}
-{DIV} {print_value(yytext(), "Divisão", yytext());}
-{PDIR} {print_value(yytext(), "Pontuação", yytext());}
-{PESQ} {print_value(yytext(), "Pontuação", yytext());}
+{SINALNUMERO} {print_value(yytext(), "Número", yytext());}
+{SOMA} {print_value(yytext(), "Operador", "Soma");}
+{SUB} {print_value(yytext(), "Operador", "Subtração");}
+{MULT} {print_value(yytext(), "Operador", "Multiplicação");}
+{EXP} {print_value(yytext(), "Operador", "Exponenciação");}
+{DIV} {print_value(yytext(), "Operador", "Divisão");}
+{PDIR} {print_value(yytext(), "Pontuação", "ParenDir");}
+{PESQ} {print_value(yytext(), "Pontuação", "ParenEsq");}
+{ESPACO} {/*Ignore*/}
 . { throw new RuntimeException("Lexemas inválidos " + yytext()); }
